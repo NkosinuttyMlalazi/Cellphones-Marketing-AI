@@ -1,0 +1,100 @@
+.phone-brand-selector {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.brand-card:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.brand-card.selected {
+  border-color: #61dafb;
+  background-color: rgba(97, 218, 251, 0.1);
+}
+
+.brand-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.brand-name {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.model-list {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.model-list h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.model-button {
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.model-button:hover {
+  background-color: rgba(97, 218, 251, 0.2);
+  border-color: #61dafb;
+}
+
+@media screen and (max-width: 768px) {
+  .brand-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .model-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-logo {
+    width: 50px;
+    height: 50px;
+  }
+} 
